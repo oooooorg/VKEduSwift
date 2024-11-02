@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ez7-2o-xYY">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Welcome-->
+        <scene sceneID="Pp4-DM-Gtz">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Welcome" id="9Y0-Hj-NLQ" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="xhe-lB-6SP"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nH0-S6-Myc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-49" y="-592"/>
+        </scene>
+        <!--Texted cat-->
+        <scene sceneID="Zoj-AO-6e4">
+            <objects>
+                <navigationController title="Texted cat" id="LbS-uD-ogm" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" image="message" catalog="system" id="A0W-6t-x9s"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="3Cl-e1-SZE">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Zuf-2Q-oE1" kind="relationship" relationship="rootViewController" id="tYZ-r0-eO9"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="U94-y2-usL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-800" y="312"/>
+        </scene>
+        <!--TextedCat-->
+        <scene sceneID="3bJ-Pb-9WE">
+            <objects>
+                <viewControllerPlaceholder storyboardName="TextedCat" id="Zuf-2Q-oE1" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="AVP-R8-Ju1"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ryf-35-L2R" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="165" y="310"/>
+        </scene>
+        <!--Cat-->
+        <scene sceneID="pdE-jy-Xc8">
+            <objects>
+                <navigationController id="bUH-lw-GBU" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Cat" image="cat.circle" catalog="system" id="cbZ-fn-EPU">
+                        <imageReference key="selectedImage" image="cat.circle.fill" catalog="system" renderingMode="template"/>
+                    </tabBarItem>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="fk3-hY-CQV">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="9Y0-Hj-NLQ" kind="relationship" relationship="rootViewController" id="ASR-0b-gY9"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="P04-Z9-RTd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-825" y="-592"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="NoG-Eo-lQR">
+            <objects>
+                <tabBarController id="ez7-2o-xYY" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="5xe-IZ-h06">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="bUH-lw-GBU" kind="relationship" relationship="viewControllers" id="Shn-3v-jSm"/>
+                        <segue destination="LbS-uD-ogm" kind="relationship" relationship="viewControllers" id="CSg-Re-6Vs"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iz1-gJ-dYz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2024" y="-239"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="cat.circle" catalog="system" width="128" height="123"/>
+        <image name="cat.circle.fill" catalog="system" width="128" height="123"/>
+        <image name="message" catalog="system" width="128" height="116"/>
+    </resources>
+</document>

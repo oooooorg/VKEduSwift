@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Welcome View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="WelcomeViewController" customModule="ConcerteApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cat" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="fzZ-77-Nel">
+                                <rect key="frame" x="24" y="82.666666666666657" width="345" height="346.33333333333337"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="fzZ-77-Nel" secondAttribute="height" multiplier="1:1" id="VW9-fp-1Mg"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3zf-ne-uEe">
+                                <rect key="frame" x="93" y="452" width="207" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Генерация нового кота"/>
+                                <connections>
+                                    <action selector="didTapButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QlA-IB-dha"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o2x-8W-rhk">
+                                <rect key="frame" x="12" y="508" width="369" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="wpU-IX-RYf">
+                                <rect key="frame" x="178" y="420" width="37" height="37"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="o2x-8W-rhk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="12" id="EbL-nX-LtS"/>
+                            <constraint firstItem="fzZ-77-Nel" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="F7K-GM-QgP"/>
+                            <constraint firstItem="wpU-IX-RYf" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Fyp-vJ-OaS"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="o2x-8W-rhk" secondAttribute="trailing" constant="12" id="MrC-cs-XEC"/>
+                            <constraint firstItem="fzZ-77-Nel" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="QyK-BH-2Zs"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fzZ-77-Nel" secondAttribute="trailing" constant="24" id="TEr-qq-V6u"/>
+                            <constraint firstItem="wpU-IX-RYf" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="eRH-I1-TOE"/>
+                            <constraint firstItem="3zf-ne-uEe" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="evl-jm-WJz"/>
+                            <constraint firstItem="o2x-8W-rhk" firstAttribute="top" secondItem="3zf-ne-uEe" secondAttribute="bottom" constant="21" id="jSg-aO-iMA"/>
+                            <constraint firstItem="fzZ-77-Nel" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="24" id="nvV-9I-bl5"/>
+                            <constraint firstItem="3zf-ne-uEe" firstAttribute="top" secondItem="fzZ-77-Nel" secondAttribute="bottom" constant="24" id="v4D-Zi-bAO"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="wpU-IX-RYf" id="Su9-Fn-WsR"/>
+                        <outlet property="catImageView" destination="fzZ-77-Nel" id="LtH-wx-aXt"/>
+                        <outlet property="statusLabel" destination="o2x-8W-rhk" id="2Bh-hC-O55"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140" y="4"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="cat" catalog="system" width="128" height="102"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
